@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  sd_socket_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sd_socket_app:1.0
+    container_name: "sd_socket_app_container"
+    ports:
+      - "7000:7000"
+    volumes:
+      - .:/distributed_systems_project
